@@ -9,7 +9,11 @@ void give_raise(Employee& employee, float percent_raise) {
 Employee::Employee(std::string name, int id, std::string title, float pay_rate, std::string email) :
   UniversityPerson(name, id), title(title), pay_rate(pay_rate) {
     this->email = email;
-  }
+}
+
+Employee::~Employee() {
+  std::cout << "In Employee destructor" << std::endl;
+}
 
 float Employee::get_pay_rate() {
   return this->pay_rate;
