@@ -16,7 +16,3 @@ std::string UniversityPerson::get_name() {
 int UniversityPerson::get_id() {
   return this->id;
 }
-
-bool operator==(const UniversityPerson& p1, const UniversityPerson& p2) {
-  return p1.id == p2.id;
-}

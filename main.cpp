@@ -9,11 +9,14 @@ Employee* get_employee(int n) {
   if (rand() % 2) {
     return new Employee("Some Employee", 933000000 + n, "Title", n * 10.0, "email@oregonstate.edu");
   } else {
-    return new Instructor("Some Instructor", 933000000 + n, "Instructor", 10000 * n, "email@oregonstate.edu", 9);
+    return new Instructor("Some Instructor", 933000000 + n, "Instructor", 10000.0 * n, "email@oregonstate.edu", 9);
   }
 }
 
 int main() {
+
+  Instructor i("I", 1, "I", 1000, "email", 9);
+  Employee* e = &i;
 
   Employee employee = Instructor("Princess Leia", 933222222, "Instructor", 1000000, "leia@oregonstate.edu", 9);
   std::cout << "employee: " << employee.get_name() << "\t" << employee.get_id()

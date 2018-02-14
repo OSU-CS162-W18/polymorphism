@@ -12,9 +12,7 @@ public:
   virtual ~Employee();
   float get_pay_rate();
   virtual float get_monthly_pay(float hours_worked);
-  friend void give_raise(Employee& employee, float percent_raise);
 };
 
-void give_raise(Employee& employee, float percent_raise);
 
 #endif
